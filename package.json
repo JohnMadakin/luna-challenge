@@ -1,0 +1,34 @@
+{
+  "name": "luna-challenge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "export NODE_ENV=test && jest --forceExit --detectOpenHandles --verbose  --runInBand --coverage",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JohnMadakin/luna-challenge.git"
+  },
+  "author": "Mithrandir",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JohnMadakin/luna-challenge/issues"
+  },
+  "homepage": "https://github.com/JohnMadakin/luna-challenge#readme",
+  "devDependencies": {
+    "jest": "^28.1.3"
+  },
+  "dependencies": {
+    "express": "^4.18.1",
+    "joi": "^17.6.0"
+  },
+  "engines": {
+    "node": "14.x"
+  }
+}
