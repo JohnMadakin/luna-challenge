@@ -1,5 +1,3 @@
-const errorResponse = require('./apiError');
-
 module.exports = function validateSpec(spec, data, optionalConfig = {}) {
   const { error, value } = spec.validate(data, {
     allowUnknown: true,
@@ -12,7 +10,7 @@ module.exports = function validateSpec(spec, data, optionalConfig = {}) {
     ...optionalConfig,
   });
   if (error) {
-    errorResponse.throwError(error.message);
+    throw new Error(error.message);
   }
   return value;
 };
